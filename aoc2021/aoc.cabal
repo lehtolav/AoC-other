@@ -1,0 +1,105 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c516e8d4faa5b7ec8012ff1ed5b3e536e00308f272d161b0014d6fa098605ada
+
+name:           aoc
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/aoc#readme>
+homepage:       https://github.com/githubuser/aoc#readme
+bug-reports:    https://github.com/githubuser/aoc/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/aoc
+
+library
+  exposed-modules:
+      Puzzle1
+      Puzzle10
+      Puzzle11
+      Puzzle12
+      Puzzle13
+      Puzzle14
+      Puzzle15
+      Puzzle16
+      Puzzle17
+      Puzzle18
+      Puzzle19
+      Puzzle2
+      Puzzle20
+      Puzzle3
+      Puzzle4
+      Puzzle5
+      Puzzle6
+      Puzzle7
+      Puzzle8
+      Puzzle9
+      Puzzles
+      PuzzleT
+      Tools
+  other-modules:
+      Paths_aoc
+  hs-source-dirs:
+      src
+  default-extensions: TupleSections
+  build-depends:
+      base >=4.7 && <5
+    , comonad
+    , containers
+    , directory
+    , regex-tdfa
+    , split
+    , strict
+  default-language: Haskell2010
+
+executable aoc-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_aoc
+  hs-source-dirs:
+      app
+  default-extensions: TupleSections
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aoc
+    , base >=4.7 && <5
+    , comonad
+    , containers
+    , directory
+    , regex-tdfa
+    , split
+    , strict
+  default-language: Haskell2010
+
+test-suite aoc-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_aoc
+  hs-source-dirs:
+      test
+  default-extensions: TupleSections
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aoc
+    , base >=4.7 && <5
+    , comonad
+    , containers
+    , directory
+    , regex-tdfa
+    , split
+    , strict
+  default-language: Haskell2010
